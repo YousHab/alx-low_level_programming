@@ -9,16 +9,17 @@
 int main(void)
 {
 	int a = 0;
-	int b = 0;
+	int b;
 
 	while (a < 10)
 	{
+		b = 0;
 		while (b < 10)
 		{
 			if (a != b && a < b)
 			{
-				putchar('0' + a);
-				putchar('0' + b);
+				putchar(48 + a);
+				putchar(48 + b);
 
 				if (a + b != 17)
 				{
