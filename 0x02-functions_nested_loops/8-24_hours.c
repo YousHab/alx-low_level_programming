@@ -27,7 +27,7 @@ void jack_bauer(void)
 					_putchar('0' + n);
 					_putchar('\n');
 					n++;
-					if (i == 2 && j == 3 && m == 5 && n == 9)
+					if (i == 2 && j == 9 && m == 5 && n == 9)
 						return;
 				}
 				m++;
