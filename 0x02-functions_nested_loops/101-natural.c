@@ -18,6 +18,5 @@ int main(void)
 		if (a == 0 || b == 0)
 			n += i;
 	}
-	printf("%d", n);
 	return (0);
 }
