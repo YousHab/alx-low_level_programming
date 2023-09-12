@@ -18,7 +18,7 @@ int main(void)
 		for (j = 2; j < i; j++)
 		{
 			if (i % j != 0)
-				printf("%d, ", n);
+				printf("%d, ", i);
 		}
 	}
 	printf("\n");
