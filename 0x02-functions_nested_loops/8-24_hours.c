@@ -1,0 +1,40 @@
+#include "main.h"
+/**
+ * jack_bauer - print minutes of jack bauer day
+ *
+ *
+ */
+
+
+
+
+
+void jack_bauer(void)
+{
+	int i, j, m, n;
+
+	while (i < 3)
+	{
+		while (j < 10)
+		{
+			while (m < 6)
+			{
+				while (n < 10)
+				{
+					_putchar('0' + i);
+					_putchar('0' + j);
+					_putchar(':');
+					_putchar('0' + m);
+					_putchar('0' + n);
+					_putchar('\n');
+					n++;
+					if (i == 2 && j == 3 && m == 5 && n == 9)
+						break;
+				}
+				m++;
+			}
+			j++;
+		}
+		i++;
+	}
+}
