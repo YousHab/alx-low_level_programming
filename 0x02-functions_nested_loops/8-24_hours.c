@@ -5,10 +5,6 @@
  *
  */
 
-
-
-
-
 void jack_bauer(void)
 {
 	int i, j, m, n;
@@ -32,7 +28,7 @@ void jack_bauer(void)
 					_putchar('\n');
 					n++;
 					if (i == 2 && j == 3 && m == 5 && n == 9)
-						break;
+						return;
 				}
 				m++;
 			}
