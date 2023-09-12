@@ -3,7 +3,7 @@
 /**
  * times_table - print out the 9 times table
  *
- * 
+ *
  */
 void times_table(void)
 {
