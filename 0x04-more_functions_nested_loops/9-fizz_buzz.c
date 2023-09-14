@@ -14,7 +14,10 @@ int main(void)
 	for (i = 1; i <= n; i++)
 	{
 		if (i % 5 == 0)
-			printf("Buzz ");
+			if (i % 5 == 0)
+                                printf("FizzBuzz ");
+                        else
+                                printf("Buzz ");
 		else if (i % 3 == 0)
 			if (i % 5 == 0)
 				printf("FizzBuzz ");
