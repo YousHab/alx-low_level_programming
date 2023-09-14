@@ -11,14 +11,15 @@ int main(void)
 	int i, n;
 
 	n = 100;
-	for (i = 0; i < 100; i++)
-	{
-		if (i > 2)  
-			if ((i % 3 == 0) && (i % 5 == 0))
+	for (i = 1; i < n; i++)
+	{  
+		if (i % 3 == 0)
+			if (i % 5 == 0)
 				printf("Fizz Buzz ");
-			else if (i % 3 == 0)
+			else
 				printf("Fizz ");
-		printf("%d ", i);
+		else
+			printf("%d ", i);
 	}
 	printf("\n");
 }
