@@ -30,7 +30,7 @@ int is_prime(int n)
 
 int main(void)
 {
-	long int n = 612852475143;
+	long int n = 1231952;
 	long int i = 2;
 	long int j = 0;
 
@@ -39,17 +39,14 @@ int main(void)
 		if (is_prime(i) == 1)
 		{
 			j = i;
-			while (n % j == 0)
+			while ((n % j == 0) && (n != j))
 			{
 				n = n / j;
-				if (n != 1)
-					printf("%ld, ", j);
-				else
-					printf("%ld\n", j);
 			}
 		}
 		else
 			continue;
 	}
+	printf("%ld\n", n);
 	return (0);
 }
