@@ -30,9 +30,9 @@ int is_prime(int n)
 
 int main(void)
 {
-	unsigned long int n = 612852475143;
-	unsigned long int i;
-	unsigned long int j;
+	long long int n = 612852475143;
+	long long int i;
+	long long int j;
 
 	for (i = 2; i <= n; i++)
 	{
@@ -47,6 +47,6 @@ int main(void)
 		else
 			continue;
 	}
-	printf("%ld\n", n);
+	printf("%lld\n", n);
 	return (0);
 }
