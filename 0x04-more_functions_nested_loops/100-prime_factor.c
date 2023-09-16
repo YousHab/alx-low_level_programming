@@ -31,8 +31,8 @@ int is_prime(int n)
 int main(void)
 {
 	unsigned long int n = 612852475143;
-	unsigned long int i ;
-	unsigned long int j ;
+	unsigned long int i;
+	unsigned long int j;
 
 	for (i = 2; i <= n; i++)
 	{
