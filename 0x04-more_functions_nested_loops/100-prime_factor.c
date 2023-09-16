@@ -51,5 +51,6 @@ int main(void)
 		else
 			continue;
 	}
+	printf("\n");
 	return (0);
 }
