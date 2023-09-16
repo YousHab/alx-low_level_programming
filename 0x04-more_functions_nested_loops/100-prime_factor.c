@@ -40,11 +40,13 @@ int main(void)
 		{
 			j = i;
 			while (n % j == 0)
+			{
 				n = n / j;
 				if (n != 1)
 					printf("%ld, ", j);
 				else
 					printf("%ld", j);
+			}
 		}
 		else
 			continue;
