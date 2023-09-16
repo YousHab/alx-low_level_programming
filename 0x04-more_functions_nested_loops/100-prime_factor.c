@@ -45,12 +45,11 @@ int main(void)
 				if (n != 1)
 					printf("%ld, ", j);
 				else
-					printf("%ld", j);
+					printf("%ld\n", j);
 			}
 		}
 		else
 			continue;
 	}
-	printf("\n");
 	return (0);
 }
