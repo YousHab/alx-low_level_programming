@@ -21,4 +21,4 @@ void print_array(int *a, int n)
 		printf("%d", a[n - 1]);
 	}
 	printf('\n');
-/bin/bash: line 1: q: command not found
+}
