@@ -22,10 +22,10 @@ int size(char *n)
  * Return: the converted integer.
  */
 
-long long int convert(char *m)
+long int convert(char *m)
 {
 	int i = 0;
-	long long int cv_n = 0;
+	long int cv_n = 0;
 	int f = 1;
 
 	if (m[0] == '-')
@@ -62,7 +62,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i = 0, j = 0;
 	int n[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	char nc[10] = "0123456789";
-	long long int converted_n1, converted_n2, res, a;
+	long int converted_n1, converted_n2, res, a;
 	char tmp;
 	int szrv = 0, size1 = size(n1), size2 = size(n2);
 
