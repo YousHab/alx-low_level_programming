@@ -1,21 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-/**
- * pow - function that calculate the power of a number by another number.
- *
- * @n: the base.
- * @m: the exponent.
- *
- * Return: the result.
- */
-
-long long int power(int n, int m)
-{
-	if (m == 0)
-		return (1);
-	else
-		return ( n * power(n, m-1));
-}
 
 /**
  * size - calculate the size of a string.
@@ -42,26 +26,26 @@ int size(char *n)
 
 long long int convert(char *m)
 {
-	int i = 0, j; 
+	int i = 0; 
 	long long int cv_n = 0;
-	int n[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-	char nc[10] = "0123456789";
-	long long int size_m;
+	int f = 1;
+	
+	if (m[0] == '-')
+	{
+		f = -1;
+		i = 1;
+	}	
 
-	size_m = size(m);
 	while (m[i] != '\0')
 	{
-		for (j = 0; j < 10; j++)
+		if (m[i] >= '0' && m[i])
 		{
-			if (m[i] == nc[j])
-			{
-				cv_n += n[j] * power(10, (size_m - i - 1));
-				
-			}
+			cv_n = cv_n * 10 + (m[i] - '0');
 		}
 		i++;
 	}
-	return (cv_n);
+	
+	return (cv_n * f);
 }
 
 /**
