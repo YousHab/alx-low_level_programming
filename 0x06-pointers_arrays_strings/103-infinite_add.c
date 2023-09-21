@@ -1,6 +1,4 @@
 #include "main.h"
-
-
 /**
  * size - calculate the size of a string.
  * @n: the string to be calculated.
@@ -76,7 +74,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (size1 >= (size_r - 1) || size2 >= (size_r - 1))
 		return (0);
 	while (res != 0)
-	{
+	{i
 		a = res % 10;
 		for (j = 0; j < 10; j++)
 		{
