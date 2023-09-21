@@ -24,6 +24,8 @@ int main(void)
 	{
 		printf("%s + %s = %s\n", n, m, res);
 	}
+	printf("%d\n", convert(m));
+	printf("%d\n", size(m));
 	n = "1234567890";
 	m = "1";
 	res = infinite_add(n, m, r2, 10);
@@ -35,6 +37,8 @@ int main(void)
 	{
 		printf("%s + %s = %s\n", n, m, res);
 	}
+	printf("%d\n", convert(m));
+        printf("%d\n", size(m));
 	n = "999999999";
 	m = "1";
 	res = infinite_add(n, m, r2, 10);
@@ -42,6 +46,8 @@ int main(void)
 	{
 		printf("Error\n");
 	}
+	printf("%d\n", convert(m));
+	printf("%d\n", size(m));
 	else
 	{
 		printf("%s + %s = %s\n", n, m, res);

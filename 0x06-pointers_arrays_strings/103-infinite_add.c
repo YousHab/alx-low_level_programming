@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * pow - function that calculate the power of a number by another number.
  *
@@ -8,7 +9,7 @@
  * Return: the result.
  */
 
-int power(int n, int m)
+long long int power(int n, int m)
 {
 	if (m == 0)
 		return (1);
@@ -39,13 +40,13 @@ int size(char *n)
  * Return: the converted integer.
  */
 
-int convert(char *m)
+long long int convert(char *m)
 {
 	int i = 0, j; 
-	long int cv_n = 0;
+	long long int cv_n = 0;
 	int n[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	char nc[10] = "0123456789";
-	int size_m;
+	long long int size_m;
 
 	size_m = size(m);
 	while (m[i] != '\0')
@@ -80,10 +81,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i = 0, j = 0;
 	int n[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	char nc[10] = "0123456789";
-	long int converted_n1;
-	long int converted_n2;
-	long int res;
-	long int a;
+	long long int converted_n1;
+	long long int converted_n2;
+	long long int res;
+	long long int a;
 	char tmp;
 	int szrv = 0;
 	int size1, size2;
@@ -126,4 +127,61 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		return (r);
 	}
+}
+
+/**
+ *  * main - check the code
+ *   *
+ *    * Return: Always 0.
+ *     */
+int main(void)
+{
+	char *n = "1234567892434574367823574575678477685785645685876876774586734734563456453743756756784458";
+	char *m = "9034790663470697234682914569346259634958693246597324659762347956349265983465962349569346";
+	char r[100];
+	char r2[10];
+	char r3[11];
+	char *res;
+
+	res = infinite_add(n, m, r, 100);
+	if (res == 0)
+	{
+		printf("Error\n");
+	}
+	else
+	{
+		printf("%s + %s = %s\n", n, m, res);
+	}
+	n = "1234567890";
+	m = "1";
+	res = infinite_add(n, m, r2, 10);
+	if (res == 0)
+	{
+		printf("Error\n");
+	}
+	else
+	{
+		printf("%s + %s = %s\n", n, m, res);
+	}
+	n = "999999999";
+	m = "1";
+	res = infinite_add(n, m, r2, 10);
+	if (res == 0)
+	{
+		printf("Error\n");
+	}
+	else
+	{
+		printf("%s + %s = %s\n", n, m, res);
+	}
+	res = infinite_add(n, m, r3, 11);
+	if (res == 0)
+	{
+		printf("Error\n");
+	}
+	else
+	{
+		printf("%s + %s = %s\n", n, m, res);
+	}
+	return (0);
 }
