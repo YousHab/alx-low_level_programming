@@ -42,7 +42,7 @@ int size(char *n)
 int convert(char *m)
 {
 	int i = 0, j; 
-	int cv_n = 0;
+	long int cv_n = 0;
 	int n[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	char nc[10] = "0123456789";
 	int size_m;
@@ -80,10 +80,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i = 0, j = 0;
 	int n[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	char nc[10] = "0123456789";
-	int converted_n1;
-	int converted_n2;
-	int res;
-	int a;
+	long int converted_n1;
+	long int converted_n2;
+	long int res;
+	long int a;
 	char tmp;
 	int szrv = 0;
 	int size1, size2;
@@ -96,7 +96,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	size1 = size(n1);
 	size2 = size(n2);
 
-	if (size1 > size_r || size2 > size_r)
+	if (size1 >= (size_r - 1) || size2 >= (size_r - 1))
 		return (0);
 
 	while (res != 0)
