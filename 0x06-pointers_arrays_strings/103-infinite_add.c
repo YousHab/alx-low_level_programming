@@ -42,7 +42,6 @@ long long int convert(char *m)
 		}
 		i++;
 	}
-
 	return (cv_n * f);
 }
 
@@ -74,7 +73,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (size1 >= (size_r - 1) || size2 >= (size_r - 1))
 		return (0);
 	while (res != 0)
-	{i
+	{
 		a = res % 10;
 		for (j = 0; j < 10; j++)
 		{
