@@ -1,4 +1,20 @@
 #include "main.h"
+/**
+ * pow - function that calculate the power of a number by another number.
+ *
+ * @n: the base.
+ * @m: the exponent.
+ *
+ * Return: the result.
+ */
+
+int power(int n, int m)
+{
+	if (m == 0)
+		return (1);
+	else
+		return ( n * power(n, m-1));
+}
 
 /**
  * size - calculate the size of a string.
@@ -38,7 +54,8 @@ int convert(char *m)
 		{
 			if (m[i] == nc[j])
 			{
-				cv_n += n[j] * (10 ^ (size_m - i - 1));
+				cv_n += n[j] * power(10, (size_m - i - 1));
+				
 			}
 		}
 		i++;
