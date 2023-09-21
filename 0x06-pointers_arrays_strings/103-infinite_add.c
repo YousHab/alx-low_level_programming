@@ -36,7 +36,7 @@ long long int convert(char *m)
 
 	while (m[i] != '\0')
 	{
-		if (m[i] >= '0' && m[i])
+		if (m[i] >= '0' && m[i] <= '9')
 		{
 			cv_n = cv_n * 10 + (m[i] - '0');
 		}
