@@ -24,7 +24,9 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				c++;
 			}
+			j++;
 		}
+		i++;
 	}
 	return (c);
 }
