@@ -7,7 +7,7 @@
  * Return: The factorial of n.
  */
 
-int factorial(int n)
+unsigned int factorial(unsigned int n)
 {
 	if (n == 0 || n == 1)
 		return (1);
