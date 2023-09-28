@@ -1,6 +1,6 @@
 #include "main.h"
 int _strlen(char *s);
-int is_pal(char *s, int i, int n)
+int is_pal(char *s, int i, int n);
 
 
 /**
@@ -19,7 +19,8 @@ int is_palindrome(char *s)
 	return (is_pal(s, 0, _strlen(s)));
 }
 
-/** _strlen - returns the length of a string.
+/**
+ * _strlen - returns the length of a string.
  *
  * @s: the string.
  *
@@ -45,7 +46,7 @@ int _strlen(char *s)
 
 int is_pal(char *s, int i, int n)
 {
-	if (*(s + i) != *(s + n -1))
+	if (*(s + i) != *(s + n - 1))
 		return (0);
 	if (i >= n)
 		return (1);
