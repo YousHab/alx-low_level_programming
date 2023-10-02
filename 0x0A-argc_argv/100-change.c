@@ -14,8 +14,8 @@
 int main(int argc, char *argv[])
 {
 	int coins[5] = {25, 10, 5, 2, 1};
-	int i;
-	int d = atoi(argv[1]);
+	int i = 0;
+	int d;
 	int change = 0;
 
 	if (argc != 2)
@@ -23,18 +23,18 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else
-		while (d != 0)
+	d = atoi(argv[1]);
+	while (d != 0)
+	{
+		if (d / coins[i] != 0)
 		{
-			if (d / coins[i] != 0)
-			{
-				change += (d / coins[i]);
-				d %= coins[i];
-				i++;
-			}
-			else
-				i++;
+			change += (d / coins[i]);
+			d %= coins[i];
+			i++;
 		}
+		else
+			i++;
+	}
 	printf("%d\n", change);
 	return (0);
 }
