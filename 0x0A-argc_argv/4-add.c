@@ -21,16 +21,13 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; j < strlen(argv[i]); j++)
 		{
-			if (argv[i][j] < '9' && argv[i][j] > '0')
-			{
-				sum += atoi(argv[i]);
-			}
-			else
+			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
+		sum += atoi(argv[i]);	
 	}
 	printf("%d\n", sum);
 	return (0);
