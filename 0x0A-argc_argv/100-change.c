@@ -24,11 +24,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	d = atoi(argv[1]);
-	if (d == 1)
-	{
-		change = 1;								
- 		d = 0;	
-	}
 	while (d != 0)
 	{
 		if (d / coins[i] != 0)
