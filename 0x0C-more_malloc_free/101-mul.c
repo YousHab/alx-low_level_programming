@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int num1, num2, result, i, j = 0;
+	long int num1, num2, result, i, j = 0;
 
 	if (argc != 3)
 	{
@@ -37,6 +37,6 @@ int main(int argc, char *argv[])
 
 	result = num1 * num2;
 
-	printf("%d\n", result);
+	printf("%ld\n", result);
 	return (0);
 }
