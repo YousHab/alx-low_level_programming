@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - program that performs a simple operations.
@@ -20,6 +22,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
+	
 	n1 = atoi(argv[1]);
 	n2 = atoi(argv[3]);
 
@@ -30,7 +33,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((*argv[2] == '/' || *argv[2] == '%') & (n2 == 0))
+	if ((*argv[2] == '/' || *argv[2] == '%') && (n2 == 0))
 	{
 		printf("Error\n");
 		exit(99);
@@ -42,5 +45,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-
-
