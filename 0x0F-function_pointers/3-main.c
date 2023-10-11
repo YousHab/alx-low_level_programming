@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	
 	n1 = atoi(argv[1]);
 	n2 = atoi(argv[3]);
 
