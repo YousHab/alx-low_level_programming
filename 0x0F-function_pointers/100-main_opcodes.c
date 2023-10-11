@@ -1,6 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+/**
+ * main - a program that prints the opcodes of its own main function.
+ *
+ * @argc: number of arguments.
+ * @argv: arguments.
+ *
+ * Return: 0.
+ */
 
 int main(int argc, char **argv)
 {
@@ -22,12 +30,12 @@ int main(int argc, char **argv)
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%02hhx", *((char *)main +i));
+		printf("%02hhx", *((char *)main + i));
 		if (i < n - 1)
 			printf(" ");
-		else 
+		else
 			printf("\n");
 	}
-	
+
 	return (0);
 }
