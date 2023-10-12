@@ -11,10 +11,7 @@ void print_all(const char * const format, ...)
 	char *cmp, *separator;
 
 	va_start(args, format);
-
-	i = 0;
 	separator = "";
-
 	if (format)
 	{
 		while (format[i])
@@ -40,9 +37,9 @@ void print_all(const char * const format, ...)
 					i++;
 					continue;
 			}
+			separator = ", ";
+			i++;
 		}
-		separator = ", ";
-		i++;
 	}
 	printf("\n");
 	va_end(args);
