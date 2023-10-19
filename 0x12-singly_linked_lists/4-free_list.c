@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * free_list - a function that frees a list.
  * @head: address of the head.
