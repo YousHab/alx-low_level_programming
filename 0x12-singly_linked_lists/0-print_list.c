@@ -2,16 +2,16 @@
 /**
  * _strlen - claculate length of a string
  * @s: a ponter to the string
- * Retrun: the length.
+ * Return: the length.
  */
- 
 
 int _strlen(char *s)
 {
 	int count = 0;
+
 	if (s == NULL)
 		return (0);
-	while(*s++)
+	while (*s++)
 	{
 		count++;
 	}
