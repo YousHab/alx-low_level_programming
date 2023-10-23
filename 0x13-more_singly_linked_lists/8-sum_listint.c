@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * sum_listint - function that returns teh sum of all data of a linked list
  *
