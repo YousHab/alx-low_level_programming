@@ -7,9 +7,9 @@
  * Return: the length of the list.
  */
 
-size_t lengthlist(listint_t *h)
+unsigned int lengthlist(listint_t *h)
 {
-	int count = 0;
+	unsigned int count = 0;
 	listint_t *ptr = NULL;
 
 	if (!h)
@@ -44,7 +44,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		return (NULL);
 
 	n = lengthlist(head);
-	if (index > n || index < 0)
+	if (index > n )
 		return (NULL);
 
 	p = head;
