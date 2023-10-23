@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * listint_len - prints the number of elements in a linked listint_t list
+ * lengthlist - prints the number of elements in a linked listint_t list
  *
  * @h: a pointer to the head of the list.
  *
@@ -44,7 +44,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		return (NULL);
 
 	n = lengthlist(head);
-	if (index > n )
+	if (index > n)
 		return (NULL);
 
 	p = head;
