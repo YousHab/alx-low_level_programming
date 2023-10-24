@@ -5,7 +5,7 @@
  * @h: a pointer to the head of the list.
  *
  * Return: the length of the list.
- */
+ 
 
 unsigned int lengthlist(listint_t *h)
 {
@@ -21,7 +21,7 @@ unsigned int lengthlist(listint_t *h)
 		ptr = ptr->next;
 	}
 	return (count);
-}
+}*/
 /**
  * insert_nodeint_at_index - insert a new node.
  *

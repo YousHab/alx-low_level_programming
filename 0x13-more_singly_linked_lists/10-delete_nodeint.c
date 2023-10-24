@@ -1,27 +1,4 @@
 #include "lists.h"
-/**
- * lengthlist - prints the number of elements in a linked listint_t list
- *
- * @h: a pointer to the head of the list.
- *
- * Return: the length of the list.
- */
-
-unsigned int lengthlist(listint_t *h)
-{
-	unsigned int count = 0;
-	listint_t *ptr = NULL;
-
-	if (!h)
-		return (0);
-	ptr = h;
-	while (ptr)
-	{
-		count++;
-		ptr = ptr->next;
-	}
-	return (count);
-}
 
 /**
  * delete_nodeint_at_index - deletes the node at
@@ -42,23 +19,28 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	if (*head == NULL)
 		return (-1);
+	p = *head;
 	if (index == 0)
 	{
-		free(*head);
+		*head = p->next;
+		free(p);
 		return (1);
 	}
-
-	len = lengthlist(*head);
-	if (index > len)
-		return (-1);
-
-	p = *head;
 	for (i = 0; i < index; i++)
 	{
+		if (p == NULL)
+		{
+			return (-1);
+		}
+		tmp = p;
 		p = p->next;
 	}
-	tmp = p->next;
+
+	if (p == NULL)
+	{
+		return (-1);
+	}
+	tmp->next = p->next;
 	free(p);
-	p = tmp;
 	return (1);
 }
