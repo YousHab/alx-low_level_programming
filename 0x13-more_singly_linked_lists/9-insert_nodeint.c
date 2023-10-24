@@ -1,5 +1,27 @@
 #include "lists.h"
+/**
+ * lengthlist - prints the number of elements in a linked listint_t list
+ *
+ * @h: a pointer to the head of the list.
+ *
+ * Return: the length of the list.
+ */
 
+unsigned int lengthlist(listint_t *h)
+{
+	unsigned int count = 0;
+	listint_t *ptr = NULL;
+
+	if (!h)
+		return (0);
+	ptr = h;
+	while (ptr)
+	{
+		count++;
+		ptr = ptr->next;
+	}
+	return (count);
+}
 /**
  * insert_nodeint_at_index - insert a new node.
  *
