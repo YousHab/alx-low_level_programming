@@ -13,20 +13,20 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int n;
+	int fds;
 	ssize_t count;
-	char buffer[READ_BUF_SIZE * 8];
+	char buffer[BUFF * 8];
 
 	if (!filename || !letters)
 		return (0);
-	n = open(filename, O_RDONLY);
-	if (n == -1)
+	fds = open(filename, O_RDONLY);
+	if (fds == -1)
 	{
 		return (0);
 	}
-	count = read(n, &buffer[0], letters);
-	count = write(STDOUT_FILENO, &buffer[0], bytes);
-	close(n);
+	count = read(fds, &buffer[0], letters);
+	count = write(STDOUT_FILENO, &buffer[0], count);
+	close(fds);
 	return (count);
 
 }
