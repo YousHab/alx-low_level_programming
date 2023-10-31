@@ -14,19 +14,20 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fds;
-	ssize_t count;
-	char buffer[BUFF * 8];
+	ssize_t count, counts;
+	char *buffer;
 
-	if (!filename || !letters)
+	if (!filename)
 		return (0);
 	fds = open(filename, O_RDONLY);
 	if (fds == -1)
-	{
 		return (0);
-	}
-	count = read(fds, &buffer[0], letters);
-	count = write(STDOUT_FILENO, &buffer[0], count);
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
+		return (0);
+	count = read(fds, buffer, letters);
+	counts = write(STDOUT_FILENO, buffer, count);
 	close(fds);
-	return (count);
-
+	free(buffer);
+	return (counts);
 }
