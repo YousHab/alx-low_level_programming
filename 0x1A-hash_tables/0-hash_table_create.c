@@ -23,8 +23,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 	new_hash_table->array = malloc(sizeof(hash_node_t *) * size);
 
 	if (!new_hash_table->array)
+	{
 		free(new_hash_table);
 		return (NULL);
+	}
 
 	for (i = 0; i < size; i++)
 	{
