@@ -21,9 +21,9 @@ void hash_table_print(const hash_table_t *ht)
 			p = p->next;
 			if (p)
 				printf(", ");
-			else if (i != ht->size - 1)
-				printf(", ");
 		}
+		if (i != ht->size - 1)
+			printf(", ");
 	}
 	printf("}");
 }
