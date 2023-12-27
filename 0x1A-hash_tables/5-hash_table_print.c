@@ -11,6 +11,9 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	hash_node_t *p;
 
+	if (!ht)
+		return;
+
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
@@ -22,7 +25,7 @@ void hash_table_print(const hash_table_t *ht)
 			if (p)
 				printf(", ");
 		}
-		if (i != ht->size - 1)
+		if (i < ht->size - 1 && ht->array[i + 1] != NULL)
 			printf(", ");
 	}
 	printf("}");
