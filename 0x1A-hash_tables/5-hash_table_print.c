@@ -19,7 +19,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			printf("\'%s\': \'%s\'", p->key, p->value);
 			p = p->next;
-			if (p || i != ht->size)
+			if (p || i != ht->size - 1)
 				printf(", ");
 		}
 	}
