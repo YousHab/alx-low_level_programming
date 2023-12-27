@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!value_dup)
 		return (0);
 
-	hash_index = key_index(key, ht->size);
+	hash_index = key_index((const unsigned char *)key_dup, ht->size);
 
 	if (ht->array[hash_index] == NULL)
 	{
