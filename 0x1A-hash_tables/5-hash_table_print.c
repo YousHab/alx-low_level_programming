@@ -22,7 +22,7 @@ void hash_table_print(const hash_table_t *ht)
 			if (p)
 				printf(", ");
 		}
-		if (p)
+		if (i != ht->size - 1)
 			printf(", ");
 	}
 	printf("}");
