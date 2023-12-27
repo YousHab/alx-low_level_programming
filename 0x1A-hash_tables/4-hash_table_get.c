@@ -10,7 +10,7 @@
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int hash_index, i;
+	unsigned long int hash_index;
 	char *key_dup = strdup(key);
 	hash_node_t *p;
 
